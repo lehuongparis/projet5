@@ -12,6 +12,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     
+    
+    
     @IBOutlet weak var leftPatternButton: UIButton!
     @IBOutlet weak var middlePatternButton: UIButton!
     @IBOutlet weak var rightPatternButton: UIButton!
@@ -24,6 +26,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         applicationsView.pattern = .two
         NotificationCenter.default.addObserver(self, selector: #selector(openLibrary), name: Notification.Name(rawValue: "addButtonTapped"), object: nil)
         imagePicker.delegate = self
+        
     }
 
     @IBAction func patternButtonTapped(_ sender: UIButton) {
@@ -43,8 +46,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    
+    @objc func imageTapped(sender: UITapGestureRecognizer) {
+        openLibrary()
+    }
+    
+    
     @objc func openLibrary() {
-        
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
@@ -60,8 +68,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         imageViews[tag]?.image = selectedImage
         buttons[tag]?.isHidden = true
-        //  1 addGesture sur l'image que l'on clique
+        
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
+        imageTap.numberOfTapsRequired = 1
+        imageViews[tag]?.addGestureRecognizer(imageTap)
+        
+        
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    
+    
 }
 
