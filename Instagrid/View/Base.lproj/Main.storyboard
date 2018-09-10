@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kYP-ej-6dJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JUf-Ut-oCF">
+                                <rect key="frame" x="57.5" y="521" width="260" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-GU-8ID">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="gxN-Wx-Ca3"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Layout 1"/>
+                                        <state key="selected" image="Selected" backgroundImage="Layout 1"/>
+                                        <connections>
+                                            <action selector="patternButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Px-dk-n99"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAo-cp-k7f">
+                                        <rect key="frame" x="90" y="0.0" width="80" height="80"/>
+                                        <state key="normal" backgroundImage="Layout 2"/>
+                                        <state key="selected" image="Selected" backgroundImage="Layout 2"/>
+                                        <connections>
+                                            <action selector="patternButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXX-Un-ehn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xG-3k-GSi">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                        <state key="normal" backgroundImage="Layout 3"/>
+                                        <state key="selected" image="Selected" backgroundImage="Layout 3"/>
+                                        <connections>
+                                            <action selector="patternButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3AH-oh-X7Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="vertical"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doa-Eg-Cbw">
+                                <rect key="frame" x="130.5" y="25" width="114.5" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37.5" id="75J-JT-PLb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-ku-AtT" userLabel="ApplicationsView" customClass="ApplicationsView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="40" y="186" width="295" height="295"/>
+                                <color key="backgroundColor" red="0.031372549019607843" green="0.47843137254901957" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eAh-ku-AtT" secondAttribute="height" multiplier="1:1" id="ojR-7u-yct"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2F7-lR-3gO">
+                                <rect key="frame" x="108" y="127" width="160.5" height="44"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipeup" translatesAutoresizingMaskIntoConstraints="NO" id="LUY-sc-2zl">
+                                        <rect key="frame" x="73" y="0.0" width="15" height="10"/>
+                                        <variation key="heightClass=compact" image="swipeleft"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcx-cW-YZd">
+                                        <rect key="frame" x="0.0" y="15" width="160.5" height="29"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Swipe up to share">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="26" name="Delm-Medium"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact">
+                                            <attributedString key="attributedText">
+                                                <fragment content="Swipe left to share">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="26" name="Delm-Medium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JUf-Ut-oCF" firstAttribute="centerY" secondItem="eAh-ku-AtT" secondAttribute="centerY" id="36i-tb-uvu"/>
+                            <constraint firstItem="2F7-lR-3gO" firstAttribute="leading" secondItem="Bj3-Xq-HGk" secondAttribute="leading" constant="5" id="4I9-Uw-3K9"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="centerY" secondItem="2F7-lR-3gO" secondAttribute="centerY" id="72E-it-5Wa"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="centerX" secondItem="kYP-ej-6dJ" secondAttribute="centerX" id="Fg0-L4-IBk"/>
+                            <constraint firstItem="JUf-Ut-oCF" firstAttribute="centerX" secondItem="eAh-ku-AtT" secondAttribute="centerX" id="HBi-cd-w2b"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="leading" secondItem="2F7-lR-3gO" secondAttribute="trailing" constant="5" id="Jbn-IL-J0q"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="leading" secondItem="Bj3-Xq-HGk" secondAttribute="leading" constant="40" id="MpK-hp-7rO"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="top" secondItem="Doa-Eg-Cbw" secondAttribute="bottom" constant="20" id="OLT-9G-onH"/>
+                            <constraint firstItem="Bj3-Xq-HGk" firstAttribute="trailing" secondItem="eAh-ku-AtT" secondAttribute="trailing" constant="40" id="QnM-Dg-MTb"/>
+                            <constraint firstItem="Doa-Eg-Cbw" firstAttribute="centerX" secondItem="kYP-ej-6dJ" secondAttribute="centerX" id="Vat-aJ-Pns"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="centerX" secondItem="2F7-lR-3gO" secondAttribute="centerX" id="Yxd-BV-L7s"/>
+                            <constraint firstItem="Bj3-Xq-HGk" firstAttribute="bottom" secondItem="eAh-ku-AtT" secondAttribute="bottom" constant="30" id="bRq-G6-7mX"/>
+                            <constraint firstItem="Doa-Eg-Cbw" firstAttribute="top" secondItem="Bj3-Xq-HGk" secondAttribute="top" constant="5" id="egp-Iu-SaM"/>
+                            <constraint firstItem="JUf-Ut-oCF" firstAttribute="top" secondItem="eAh-ku-AtT" secondAttribute="bottom" constant="40" id="lGb-1J-xyZ"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="top" secondItem="2F7-lR-3gO" secondAttribute="bottom" constant="15" id="mlb-tu-8h3"/>
+                            <constraint firstItem="JUf-Ut-oCF" firstAttribute="leading" secondItem="eAh-ku-AtT" secondAttribute="trailing" constant="40" id="tkq-ad-wGr"/>
+                            <constraint firstItem="eAh-ku-AtT" firstAttribute="centerY" secondItem="kYP-ej-6dJ" secondAttribute="centerY" id="ydG-Su-xw1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bj3-Xq-HGk"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bRq-G6-7mX"/>
+                                <exclude reference="4I9-Uw-3K9"/>
+                                <exclude reference="72E-it-5Wa"/>
+                                <exclude reference="Fg0-L4-IBk"/>
+                                <exclude reference="Jbn-IL-J0q"/>
+                                <exclude reference="OLT-9G-onH"/>
+                                <exclude reference="36i-tb-uvu"/>
+                                <exclude reference="tkq-ad-wGr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="QnM-Dg-MTb"/>
+                                <include reference="bRq-G6-7mX"/>
+                                <include reference="4I9-Uw-3K9"/>
+                                <include reference="72E-it-5Wa"/>
+                                <include reference="Fg0-L4-IBk"/>
+                                <include reference="Jbn-IL-J0q"/>
+                                <exclude reference="MpK-hp-7rO"/>
+                                <include reference="OLT-9G-onH"/>
+                                <exclude reference="Yxd-BV-L7s"/>
+                                <exclude reference="mlb-tu-8h3"/>
+                                <exclude reference="ydG-Su-xw1"/>
+                                <include reference="36i-tb-uvu"/>
+                                <exclude reference="HBi-cd-w2b"/>
+                                <exclude reference="lGb-1J-xyZ"/>
+                                <include reference="tkq-ad-wGr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="applicationsView" destination="eAh-ku-AtT" id="m5H-qF-5RV"/>
+                        <outlet property="leftPatternButton" destination="DUT-GU-8ID" id="y4y-uO-L3o"/>
+                        <outlet property="middlePatternButton" destination="LAo-cp-k7f" id="Bz6-6T-DvI"/>
+                        <outlet property="rightPatternButton" destination="9xG-3k-GSi" id="dnH-6R-ASw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Layout 1" width="80" height="80"/>
+        <image name="Layout 2" width="80" height="80"/>
+        <image name="Layout 3" width="80" height="80"/>
+        <image name="Selected" width="80" height="80"/>
+        <image name="swipeleft" width="10" height="15"/>
+        <image name="swipeup" width="15" height="10"/>
+    </resources>
+</document>
