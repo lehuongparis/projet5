@@ -80,7 +80,7 @@
                                         <rect key="frame" x="73" y="0.0" width="15" height="10"/>
                                         <variation key="heightClass=compact" image="swipeleft"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcx-cW-YZd">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcx-cW-YZd">
                                         <rect key="frame" x="0.0" y="15" width="160.5" height="29"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Swipe up to share">

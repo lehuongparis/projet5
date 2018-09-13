@@ -11,10 +11,6 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let imagePicker = UIImagePickerController()
-
-    let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeActionUp(_:)))
-    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeActionLeft(_:)))
-    
     var orientation = UIDevice.current.orientation
     
     @IBOutlet weak var leftPatternButton: UIButton!
@@ -22,37 +18,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var rightPatternButton: UIButton!
     
     @IBOutlet weak var applicationsView: ApplicationsView!
-    
+
+    var swipeGestureRecognizer: UISwipeGestureRecognizer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         applicationsView.pattern = .two
+        
         NotificationCenter.default.addObserver(self, selector: #selector(openLibrary), name: Notification.Name(rawValue: "addButtonTapped"), object: nil)
         imagePicker.delegate = self
         
-        swipeUp.direction = .up
-        swipeUp.numberOfTouchesRequired = 1
+        NotificationCenter.default.addObserver(self, selector: #selector(setupSwipeDirection), name: .UIDeviceOrientationDidChange, object: nil)
         
-        swipeLeft.direction = .left
-        swipeLeft.numberOfTouchesRequired = 1
-       
+        swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(sender:)))
         
-        if orientation == UIDeviceOrientation.portrait {
-            applicationsView.addGestureRecognizer(swipeUp)
-        } else {
-             applicationsView.addGestureRecognizer(swipeLeft)
-        }
+        setupSwipeDirection()
+        guard let swipeGestureRecognizer = swipeGestureRecognizer else { return }
+        
+        applicationsView.addGestureRecognizer(swipeGestureRecognizer)
+        
+    }
 
-        
+   @objc func setupSwipeDirection() {
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            swipeGestureRecognizer?.direction = .left
+        } else {
+            swipeGestureRecognizer?.direction = .up
+        }
     }
     
-    @objc func swipeActionUp(_ : UISwipeGestureRecognizer) {
-        applicationsView.isHidden = true
-    }
     
-    @objc func swipeActionLeft(_ : UISwipeGestureRecognizer) {
-        applicationsView.isHidden = true
+    @objc func swipeAction(sender : UISwipeGestureRecognizer) {
+        print("Hello")
     }
+
     
     @IBAction func patternButtonTapped(_ sender: UIButton) {
     
@@ -72,6 +71,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @objc func imageTapped(sender: UITapGestureRecognizer) {
+        applicationsView.currentTag = sender.view?.tag
         openLibrary()
     }
     
@@ -94,16 +94,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         buttons[tag]?.isHidden = true
         
         let imageTap = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
-        imageTap.numberOfTapsRequired = 1
+       
         imageViews[tag]?.addGestureRecognizer(imageTap)
         
         
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
     
 }
 
