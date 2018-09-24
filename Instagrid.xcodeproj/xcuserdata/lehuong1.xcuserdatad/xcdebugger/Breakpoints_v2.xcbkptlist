@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Instagrid/View/ApplicationsView.swift"
+            timestampString = "559324798.9555629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ApplicationsView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagrid.ApplicationsView.topLeftView.getter : weak Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Instagrid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lehuong1/Documents/OC/projet5/Instagrid/projet5/Instagrid/View/ApplicationsView.swift"
+                  timestampString = "559172663.571154"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagrid.ApplicationsView.topLeftView.setter : weak Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Instagrid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lehuong1/Documents/OC/projet5/Instagrid/projet5/Instagrid/View/ApplicationsView.swift"
+                  timestampString = "559172663.574607"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

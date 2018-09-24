@@ -50,5 +50,7 @@
 	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The image is OK</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
 </dict>
 </plist>
