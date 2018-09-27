@@ -110,6 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @objc func openSourceImage() {
         
         let alert = UIAlertController(title: "Select Photo", message: nil, preferredStyle: .actionSheet)
+        
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
             self.openCamera()
         }))
