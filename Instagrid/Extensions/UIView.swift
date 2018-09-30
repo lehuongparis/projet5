@@ -8,6 +8,7 @@
 
 import UIKit
 
+// for converting an object in Image
 extension UIView {
     func convertToUIImage()->UIImage? {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0)

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagrid/View/ApplicationsView.swift"
-            timestampString = "559324798.9555629"
+            timestampString = "559989449.6489559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "ApplicationsView"
             landmarkType = "3">
             <Locations>
